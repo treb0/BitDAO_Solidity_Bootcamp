@@ -1,4 +1,4 @@
-#Class 3 - Introduction to Solidity
+# Class 3 - Introduction to Solidity
 
 Solidity contracts created in Remix
 
