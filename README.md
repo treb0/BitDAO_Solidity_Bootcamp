@@ -1,5 +1,4 @@
-# BitDAO_Solidity_Bootcamp
-BitDAO Solidity Bootcamp organized by Encode
+Class 3 - Introduction to Solidity
 
 Solidity contracts created in Remix
 
