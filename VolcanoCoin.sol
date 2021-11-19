@@ -55,3 +55,5 @@ contract FIFACoin is ERC20, Ownable {
         return payments[msg.sender];
         
     }
+    
+}
