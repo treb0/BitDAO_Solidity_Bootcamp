@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{titulo}}</title>
+</head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script scr="../metamask/connect.js"></script>
+
+<body class='content'>
+    <h1>
+        NFT Minter
+    </h1>
+    <input id="connect" type="button" value="Connect" onclick="Connect()">
+    <h3>
+        Mint your new NFT:
+    </h3>
+    <p></p>
+    <form action="/new" method="POST">
+        <p>
+            <label for="">New NFT CID</label><br/>
+            <input type="text" name="mint_cid" id="mint_cid" size="50">
+        </p>
+        <input type="submit" id="nftMintSubmit" value="Mint NFT">
+    </form>
+
+    <h3>
+        Transfer NFT Ownership:
+    </h3>
+    <p></p>
+    <form action="/transfer" method="POST">
+        <p>
+            <label for="">Token ID</label><br/>
+            <input type="text" name="transfer_tokenId" id="transfer_tokenId" size="50">
+        </p>
+        <p>
+            <label for="">New NFT Owner</label><br/>
+            <input type="text" name="transfer_newOwner" id="transfer_newOwner" size="50">
+        </p>
+        <input type="submit" id="nftTransferSubmit" value="Transfer NFT">
+    </form>
+
+    <h3>
+    Existing NFTs:
+    </h3>
+
+
+        <table border="1" id="nftsTable">
+            <tr>
+            <th>Token ID</th>
+            <th>Token URI</th>
+            <th>Owner</th>
+            </tr>
+            {{#nfts}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{uri}}</td>
+                    <td>{{owner}}</td>
+                </tr>
+            {{/nfts}}
+        </table>
+
+</body>
+</html>
