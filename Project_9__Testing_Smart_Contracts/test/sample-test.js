@@ -30,12 +30,7 @@ describe("Volcano Coin", () => {
     console.log("Contract Name:", contractName);
   });
 
-  // NO LOGRO >> Error: Invalid JSON RPC response: ""
-
   it("reverts when transferring tokens to the zero address", async () => {
-
-    // await expectRevert(volcanoContract.transfer(constants.ZERO_ADDRESS, 10, { from: owner })
-    //   ,"ERC20: transfer to the zero address");
 
     await expect(volcanoContract.transfer(constants.ZERO_ADDRESS, 10))
       .to.be.revertedWith('ERC20: transfer to the zero address');
