@@ -1,0 +1,47 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fnil\fcharset0 HelveticaNeue-Medium;
+}
+{\colortbl;\red255\green255\blue255;\red212\green213\blue214;\red5\green5\blue6;\red0\green0\blue0;
+\red41\green43\blue48;}
+{\*\expandedcolortbl;;\cssrgb\c86275\c86667\c87059;\cssrgb\c1569\c1569\c1961\c7059;\cssrgb\c0\c0\c0;
+\cssrgb\c21176\c22353\c24706;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Hey guys, the code from today's session is available on the branch ethers under folder ethers {\field{\*\fldinst{HYPERLINK "https://github.com/ExtropyIO/Academy/tree/ethers/ethers"}}{\fldrslt \cf0 \ul \ulc0 \strokec4 https://github.com/ExtropyIO/Academy/tree/ethers/ethers}}\cf0 \ul \ulc0 \strokec4 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\fs24 \cf0 \cb5 \kerning1\expnd0\expndtw0 \ulnone \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 As promised here's a copy of the Slido Q&A for Ethers 
+\f1\b\fs32 I thought the ABI was something specific to the EVM, but apparently there can be different ABI's for the same contract, depending on what system you used? Ethers vs web3
+\f0\b0\fs24  There can be different formats of ABI in ethers, but ultimately each format will translate the ABI into bytecode for the EVM. 
+\f1\b\fs32 what's Infura?
+\f0\b0\fs24  Infura provides an Ethereum client so that you can interact with and query a blockchain in your project. 
+\f1\b\fs32 what is the await keyword needed for?
+\f0\b0\fs24  An async function is when the data you are querying may not return immediately, therefore it isn't synchronous (this is due to the network's processes). Using an async function enables your code execution to 'pause' for the data specified after the 'await' keyword. If you forget to specify 'await' you won't retrieve data back from the network because the process was synchronous and you will get back a Promise.\cb1 \uc0\u8232 
+\fs32 \uc0\u8232 \u8232 \u8232 \u8232 \u8232 \u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qr\partightenfactor0
+\ls1\ilvl0
+\f2\fs16\fsmilli8250 \cf0 \cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 [\cb1 \uc0\u8232 \cb5 4:51 PM]\cb1 \uc0\u8232 \u8232 
+\f1\b\fs32 \cb5 Can you briefly summarize again the difference between nix hardhat node and geth? Specifically what does geth do that hardhat node doesn\'92t
+\f0\b0\fs24  The hardhat node is essentially designed for development. So it is similar to Ganache. It is local host therefore there is not the usual delay you would have when interacting with a main chain. Geth connects and interacts with other nodes on a chain. Consensus mechanisms will be processed, but for a hardhat node it does not. This is likely to be because the project is in testing and development stage. 
+\f1\b\fs32 I dont understand what were meaning by tx reponse... so weve not actually sent a transaction using this yet?
+\f0\b0\fs24  You have submitted the transaction but it has not yet been mined. The transaction response contains data regarding the transaction e.g. transaction hash. The transaction is receipt can be retrieved after the transaction has been mined. 
+\f1\b\fs32 what is the difference between the contract and the factory? Karol used the factory function and the output was a deployed contract?
+\f0\b0\fs24  The Contract Factory sends a special type of transaction, an initcode transaction (i.e. the to field is null, and the data field is the initcode) where the initcode will be evaluated and the result becomes the new code to be deployed as a new contract. And the contract is just the contract to deploy 
+\fs32 \cb1 {{\NeXTGraphic da3651e59d6006dfa5fa07ec3102d1f3.svg \width640 \height640 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\fs24 \cb5  
+\f1\b\fs32 why is the test syntax different here than what we say before (expect instead of assert,...)?
+\f0\b0\fs24  We are using assert from chai and not expect. You can use either but the way to write the test is slightly different\cb1 \uc0\u8232 
+\fs32 C\uc0\u8232 \u8232 \u8232 \u8232 \u8232 \u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+}
